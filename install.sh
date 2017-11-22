@@ -1,5 +1,19 @@
+# If on OSX, use brew
+if [ uname -eq "Darwin" ]
+then
+    brew install ctags
+    brew install zsh
+fi
+
+# If on Linux, use apt
+# This assumes you're on a debian distro because I'm lazy
+if [ uname -eq "Linux" ]
+then
+    sudo apt-get install ctags
+    sudo apt-get install zsh
+fi
 # Install oh-my-zsh
-sh -c `curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh`
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Move vimrc and zshrc into home dir
 cp .vimrc ~/
@@ -11,15 +25,3 @@ vim +PluginInstall +qall
 # Install custom plugins
 cp -r plugin/ ~/.vim/
 
-# If on OSX, use brew to install ctags
-if [ uname -eq "Darwin" ]
-then
-    brew install ctags
-fi
-
-# If on Linux, use apt to install ctags
-# This assumes you're on a debian distro because I'm lazy
-if [ uname -eq "Linux" ]
-then
-    sudo apt-get install ctags
-fi
