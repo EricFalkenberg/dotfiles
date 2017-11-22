@@ -165,7 +165,6 @@ if exists("g:loaded_webdevicons")
     call webdevicons#refresh()
 endif
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 if (has("termguicolors"))
   set termguicolors
