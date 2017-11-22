@@ -160,7 +160,6 @@ set background=dark
 set guifont=MesloLGL\ Nerd\ Font:14
 let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 if exists("g:loaded_webdevicons")
     call webdevicons#refresh()
 endif
